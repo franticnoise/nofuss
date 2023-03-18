@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon";
+
+export interface Props {
+  title: string;
+  artist: string;
+  icon: string;
+  content: string;
+  image: string;
+  url: string;
+  releasedate: string;
+}
+
+const { title, artist, releasedate, image, url, icon, content } = Astro.props;
+---
+
+
+  <!--<Icon name={icon} class="overflow-hidden inline-flex sm:m-8 w-28 h-28" />-->
+
+  <article class="max-h-[25rem] overflow-hidden relative group ">
+    <a href={url} target="_blank">
+      <img src={image} class="w-52 inline-flex drop-shadow-xl scale-100 hover:scale-110 transition duration-[.4s]" />
+    </a>
+  </article>
+
+

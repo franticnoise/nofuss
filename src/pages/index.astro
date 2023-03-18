@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Footer from "@components/Footer.astro";
 
 import { homepage } from "@content/homepage";
-import Features from "@components/Features.astro";
+import HomeFeatures from "@components/HomeFeatures.astro";
 import BlogCard from "@components/BlogCard.astro";
 
 let blogs = await Astro.glob<Frontmatter>("./blog/*.mdx");
@@ -23,7 +23,9 @@ blogs = blogs.sort(
     >
       Cutting edge psytrance music label
     </p>
-    <article class="w-full max-h-[25rem] overflow-hidden relative group rounded-3xl">
+    <article
+      class="w-full max-h-[25rem] overflow-hidden relative group rounded-3xl"
+    >
       <img
         src="starbeignsbanner.jpg"
         class="w-full h-auto scale-100 hover:scale-105 transition duration-[1s] rounded-3xl drop-shadow-xl"
@@ -35,48 +37,43 @@ blogs = blogs.sort(
     </article>
     <p class="pt-4 text-sm">Listen to our latest release here.</p>
   </section>
-  <h1
-    class="sm:text-4xl text-3xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-100"
-  >
-    Latest Releases
-  </h1>
-  {
-    homepage
-      .slice(0, 3)
-      .map((homepage) => (
-        <Features
-          title={homepage.title}
-          releasedate={homepage.releasedate}
-          url={homepage.url}
-          image={homepage.image}
-          artist={homepage.artist}
-          icon={homepage.icon}
-          content={homepage.content}
-        />
-      ))
-  }
 
-  <!--
-  <section class="py-20 sm:flex sm:items-center sm:justify-evenly text-center sm:text-left">
+  <div class="flex justify-between items-center">
+    <h1 class="sm:text-4xl text-3xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-100">
+      Latest Releases
+    </h1>
+    <h1>View All</h1>
+  </div>
+
+  <section
+    id="releases"
+    class="sm:flex my-4 items-center sm:justify-evenly text-center sm:text-left overflow-hidden rounded-3xl"
+  >
     {
-      (
-        <ul class="grid sm:grid-cols-3 gap-16">
-          {counter.map((counter) => (
-            <Counter number={counter.number} label={counter.label} />
-          ))}
-        </ul>
-      )
+      homepage
+        .slice(0, 4)
+        .map((homepage) => (
+          <HomeFeatures
+            title={homepage.title}
+            releasedate={homepage.releasedate}
+            url={homepage.url}
+            image={homepage.image}
+            artist={homepage.artist}
+            icon={homepage.icon}
+            content={homepage.content}
+          />
+        ))
     }
   </section>
-
-   -->
+ 
   <section>
-    <h1
-      class="sm:text-4xl text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-100"
-    >
+
+    <div class="flex justify-between items-center">
+      <h1 class="sm:text-4xl text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-100">
       Artists
     </h1>
-    <!-- <p class="dark:text-zinc-300 mb-6">Ship Navigators</p>-->
+      <h1>View All</h1>
+    </div>
   </section>
   <section>
     <ul class="flex flex-wrap grow-0 pl-7">
