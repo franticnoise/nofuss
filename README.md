@@ -1,7 +1,5 @@
 # No Fuss Astro Template 🚀
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lancerossdev/nofuss)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flancerossdev%2Fnofuss)
 
 Hey there, this is going to be my second Astro template to showcase. As the title said, it's an Astro template without any complex designing.
 This template is made with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com) for the Front-end.
@@ -23,6 +21,3 @@ You can use `npm i` or `yarn` to install dependencies. I personally use `pnpm` b
 
 `pnpm preview` - Preview your build locally, before deploying
 
-## License ⚖️
-
-This repository has [MIT License](https://github.com/lancerossdev/nofuss/blob/main/license).
