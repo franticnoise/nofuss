@@ -1,5 +1,7 @@
 ---
+
 import Layout from "@layouts/Layout.astro";
+import MySwiper from "@scripts/slider.jsx";
 
 const metadata = {
   title: "Pleiadian Records",
@@ -8,6 +10,10 @@ const metadata = {
 ---
 
 <Layout {...metadata}>
+  <section class="p-4 " >
+      <MySwiper client:load />
+    </section>
+
   <section>
     <h1 class="sm:text-4xl text-3xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-100">
       About Pleiadian Records
