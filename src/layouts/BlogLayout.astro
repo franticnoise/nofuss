@@ -8,10 +8,10 @@ import "@fontsource/fira-code/variable.css";
 let { pubDate } = Astro.props.content;
 const { frontmatter } = Astro.props;
 const canonicalURL = new URL(Astro.url).href;
-const thisDate = new Date(pubDate).toLocaleDateString("en", {
-  dateStyle: "long",
-});
-pubDate = pubDate.split("T")[0];
+// const thisDate = new Date(pubDate).toLocaleDateString("en", {
+//   dateStyle: "long",
+// });
+//pubDate = pubDate.split("T")[0];
 const ogImageParams = new URLSearchParams({
   title: JSON.stringify(frontmatter.title),
 }).toString();
