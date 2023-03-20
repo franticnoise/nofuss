@@ -1,6 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import BlogCard from "@components/BlogCard.astro";
+import Footer from "@components/Footer.astro";
+
 interface Frontmatter {
   title: string;
   pubDate: string;
@@ -26,4 +28,5 @@ blogs = blogs.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Dat
       {blogs.map((post) => <BlogCard title={post.frontmatter.title} description={post.frontmatter.description} pubDate={post.frontmatter.pubDate} url={post.url} />)}
     </ul>
   </section>
+  <Footer />
 </Layout>

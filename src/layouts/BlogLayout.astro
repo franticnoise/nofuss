@@ -81,12 +81,13 @@ const classBody =
       document.documentElement.className = theme;
     </script>
     <script src="@scripts/main.js"></script>
+
   </head>
-  <body class={classBody}>
+  <body class={classBody} style="background-image:url('../../public/background3.jpg');background-position: center;background-size: 70%;"> 
     <Header />
     <main class="mx-auto max-w-4xl md:px-20 p-8">
       <h1 class="sm:text-4xl text-3xl font-bold my-5">{frontmatter.title}</h1>
-      <p class="dark:text-zinc-300 text-zinc-700 text-base">{pubDate}</p>
+      <!-- <p class="dark:text-zinc-300 text-zinc-700 text-base">{pubDate}</p> -->
       <section
         class="prose sm:prose-lg dark:text-slate-200 prose-a:dark:text-blue-400 prose-a:no-underline prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-zinc-400 prose-pre:scrollbar-track-zinc-300 prose-pre:dark:scrollbar-thumb-zinc-500 prose-pre:dark:scrollbar-track-zinc-700 hover:prose-a:underline prose-a:text-blue-700 dark:prose-invert prose-a:underline-offset-2"
       >
@@ -95,9 +96,9 @@ const classBody =
         </article>
       </section>
       <div class="flex flex-row justify-between">
-        <a href="/blog" class="dark:text-blue-400 text-blue-600 hover:underline mt-5">Go back to posts</a>
+        <a href="/blog" class="dark:text-blue-400 text-blue-600 hover:underline mt-5">Go back to artists</a>
       </div>
     </main>
-    <ThemeToggle />
+    <!-- <ThemeToggle /> -->
   </body>
 </html>

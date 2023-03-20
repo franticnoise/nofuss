@@ -3,7 +3,7 @@ export const homepage = [
     title: "Star Beings 3",
     artist: "Various Artist",
     releasedate: "February 2023",
-    content: "Our first release for 2023, the 3rd edition of the “Star Beings'' series is finally ready to lift off!",
+    content: "Our first release for 2023, the 3rd edition of the 'Star Beings' series is finally ready to lift off!",
     icon: "charm:rocket",
     image:"starbeings.jpg",    
     url: "https://pleiadianrecords.bandcamp.com/album/star-beings-3",
