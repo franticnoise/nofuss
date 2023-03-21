@@ -14,10 +14,10 @@ url = url + "/";
 ---
 
 <li class="flex flex-wrap gap-2 sm:grid-cols-4 leading-relaxed rounded-2xl border-zinc-700 dark:text-zinc-400">
-  <a class="col-span-3 flex flex-wrap gap-2 m-1 sm:gap-4 p-0 my-2 bg-zinc-800 hover:dark:bg-zinc-700 hover:bg-zinc-200 transition duration-[.4s] rounded" href={url}>
-    <span class="flex flex-col items-center justify-between mb-1">
-      <img src={'thumbs/thumb_' + profile_pic} class="w-32 h-32 " />
-      <h2 class="text-sm font-bold pt-1 text-black dark:text-white">{title}</h2>
+  <a class="col-span-3 flex flex-wrap gap-2 m-1 sm:gap-4 p-0 my-2 bg-zinc-800 hover:dark:bg-zinc-700 hover:bg-zinc-200 bg-opacity-50 transition duration-[.4s] rounded" href={url}>
+    <span class="flex flex-col items-center justify-between mb-1 overflow-hidden rounded">
+      <img src={'thumbs/thumb_' + profile_pic} class="sm:w-40 sm:h-40 w-24 h-24  scale-100 hover:scale-105 transition duration-[.4s]" />
+      <h2 class="text-sm font-bold pt-2  text-black dark:text-white ">{title}</h2>
     </span>
       <!-- 
         <span class="shrink-0 text-base">{shortDate}</span></span>
