@@ -21,9 +21,9 @@ const { title = defaultMeta.title, description = defaultMeta.description, heroIm
 const canonicalURL = new URL(Astro.url).href;
 
 const classBody =
-  "scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800 dark:bg-zinc-900 dark:text-white font-inter selection:bg-blue-500/70 text-xl";
+  "scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:bg-[url('background3.jpg')] bg-[url('background3_light.jpg')] dark:scrollbar-track-zinc-800 dark:bg-zinc-900 dark:text-white font-inter selection:bg-blue-500/70 text-xl";
 ---
-
+<!--background-image:url('background3.jpg'); -->
 <!DOCTYPE html>
 
 <html lang="en-US">
@@ -75,11 +75,11 @@ const classBody =
     </script>
     <script src="@scripts/main.js"></script>
   </head>
-  <body class={classBody} style="background-image:url('background3.jpg');background-position: center;background-size: 70%;">
+  <body class={classBody} style="background-position: center;background-size: 50%;">
     <Header />
     <main class="m-auto p-6 max-w-4xl md:p-8">
       <slot />
     </main>
-    <!-- <ThemeToggle /> -->
+    <ThemeToggle />
   </body>
 </html>
